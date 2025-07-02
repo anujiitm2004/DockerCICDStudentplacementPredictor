@@ -34,7 +34,7 @@ docker run -p 1000:5000 anujiitm2004/studentplacementpredictor_slim1:latest ; ru
 
 
 
--------------------------------
+----------------------------------
 
 ubuntu mai:
 
