@@ -1,0 +1,71 @@
+docker build -t anuj1 .      ; build the image
+docker build -t anujiitm2004/anuj1 .  ;(username/imagename)
+docker build -t anujiitm2004/studentplacementpredictor_alpine:latest .
+docker build -t anujiitm2004/studentplacementpredictor_alpine1:latest .
+docker build -t anujiitm2004/studentplacementpredictor_slim:latest .
+docker build -t anujiitm2004/studentplacementpredictor_slim1:latest .
+
+
+docker images                ; checking no. of docker images
+docker ps -a                 ; checking docker container
+docker run -p 9000:5000 anuj1 ; run the container
+docker stop dd0ff6ddf659
+
+docker image rm -f anuj1
+docker image rm -f anujiitm2004/studentplacementpredictor
+
+docker tag anujiitm2004/studentplacementpredictor anujiitm2004/studentplacementpredictor1 ;(rename normal to normal1)
+docker push anujiitm2004/studentplacementpredictor:latest
+docker push anujiitm2004/studentplacementpredictor_alpine:latest
+docker push anujiitm2004/studentplacementpredictor_alpine1:latest
+docker push anujiitm2004/studentplacementpredictor_slim1:latest
+
+
+
+docker pull anujiitm2004/studentplacementpredictor:latest
+docker pull anujiitm2004/studentplacementpredictor_alpine:latest
+docker pull anujiitm2004/studentplacementpredictor_alpine1:latest
+docker pull anujiitm2004/studentplacementpredictor_slim1:latest
+
+
+docker run -p 2000:5000 anujiitm2004/studentplacementpredictor_alpine:latest ; run the container
+docker run -p 3000:5000 anujiitm2004/studentplacementpredictor_alpine1:latest ; run the container
+docker run -p 1000:5000 anujiitm2004/studentplacementpredictor_slim1:latest ; run the container
+
+
+
+--------------------------
+
+ubuntu mai:
+
+
+
+sudo docker pull anujiitm2004/studentplacementpredictor:latest
+sudo docker images
+docker run -d -p 8000:5000 --name myapp anujiitm2004/studentplacementpredictor:latest
+
+firewall issue  : sudo ufw allow from any
+sudo ufw allow proto tcp from any
+
+sudo ufw allow 5000/tcp
+sudo ufw reload
+sudo ufw disable
+
+----------------------------------------------
+To push on ECR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
