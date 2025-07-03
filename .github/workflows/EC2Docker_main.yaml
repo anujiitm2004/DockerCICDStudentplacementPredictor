@@ -42,4 +42,4 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/mymlapp:latest
             docker stop mymlapp || true
             docker rm mymlapp || true
-            docker run -d -p 80:5000 --name mymlapp ${{ secrets.DOCKERHUB_USERNAME }}/mymlapp:latest
+            docker run -d -p 3000:5000 --name mymlapp ${{ secrets.DOCKERHUB_USERNAME }}/mymlapp:latest
