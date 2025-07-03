@@ -1,4 +1,4 @@
-name: CI/CD Pipeline: Build → Push to DockerHub → Deploy to EC2
+name: CI/CD Pipeline: Build -> Push to DockerHub -> Deploy to EC2
 
 on:
   push:
